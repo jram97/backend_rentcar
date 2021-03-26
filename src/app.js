@@ -9,8 +9,6 @@ import api from './api'
 const app = express(apiRoot, api)
 const server = http.createServer(app)
 
-console.log(__dirname + path.join('/api/public'))
-
 app.use('/static', express1.static(__dirname + path.join('/api/public/')));
 
 if (mongo.uri) {

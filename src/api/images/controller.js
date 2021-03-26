@@ -13,7 +13,7 @@ export const create = (req, res, next) => {
   elementName.map(async (i) => {
     await new Images({ name: i, car: req.body.carId }).save();
   })
-  return res.status(201).send({ err: 'Images was uploaded.', images_path: elementName });
+  return res.status(201).send({ msg: 'Images was uploaded.', images_path: elementName });
 }
 
 export const index = ({ querymen: { query, select, cursor } }, res, next) =>
